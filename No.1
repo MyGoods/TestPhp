@@ -1,0 +1,31 @@
+#表单提交数据
+<form name="message_center" method="post" action="getmessage.php">
+<table width="300" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="15">标题：</td>
+		<td width="15"><input name="title" type="text" id="title" /></td>
+	</tr>
+	<tr>
+		<td width="15">内容：</td>
+		<td width="100"><input name="content" type="textarea" id="content" /></td>
+	</tr>
+	<tr>
+		<td><input name="sub" type="submit" value="登录" id="sub" /></td>
+		<td><input name="res" type="reset" value="重置" /></td>
+	</tr>
+</table>
+</form>
+
+#getmessage页面获取数据内容
+
+<?php
+header("Content-Type:text/html;charset=utf-8"); 
+
+$title=$_POST['title'];
+$content=$_POST['content'];
+
+
+echo "Title:".$title;
+echo "Content:".$content;
+
+?>
