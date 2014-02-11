@@ -25,7 +25,13 @@ $title=$_POST['title'];
 $content=$_POST['content'];
 
 
-echo "Title:".$title;
-echo "Content:".$content;
-
+if(!empty($title)&&!empty($content))
+{
+	echo "标题是:".$title."<br/>";
+	echo "正文是:".$content;
+	
+}
+else
+	echo "请先提交内容！";
+	
 ?>
