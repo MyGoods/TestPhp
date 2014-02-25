@@ -27,8 +27,7 @@
 ###如何使用php？
     请看执行进度......
     
-####php有4种标记
-
+####1、php有4种标记
 * 第一种XML风格
 
 ```php
@@ -38,7 +37,6 @@ echo 'Hello World!';
 
 ?>
 ```
-
 * 第二种简短风格
 
 ```php
@@ -48,7 +46,6 @@ echo 'Hello World!';
 
 ?>
 ```
-
 * 第三种script风格
 
 ```script
@@ -58,7 +55,6 @@ echo 'Hello World!';
 
 </script>
 ```
-
 * 第四种asp风格 要在配置中设置启用asp_tags选项，默认是禁用状态
 
 ```asp
