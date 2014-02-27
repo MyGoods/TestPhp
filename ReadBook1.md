@@ -78,8 +78,89 @@ echo 'Hello World!';
 ps:如果变量名由多个单词组成，那么应该使用下划线进行分隔（比如 $my_string），或者以大写字母开头。
 
 
-####运算符
+#####运算符
 * 算术运算符 注意++ -- eg:x=2;x++ 表示x=x+1 x=3。x--表示x=x-1;x=1
 * 赋值运算符 注意x.y 表示x=x.y eg:x=a;y=b ;x=ab;
 * 比较运算符 注意=== 双等和三等的区别在于 ===要比较变量的类型和数值但是双等只比较数值
 * 逻辑运算符 与 或 非 你懂得
+
+####3、Switch语句&&数组
+#####Switch语句
+
+```php
+<?php
+
+    //switch语句 用于执行基于多个不同条件的不同动作。
+    //等同多个if...elseif...else,但比if else精简，清晰
+    
+switch($lan)
+{
+	case 3:
+	echo "Java";
+	break;
+	
+	case 1:
+	echo "C语言";
+	break;
+	
+	case 2:
+	echo "Python";
+	
+	default:
+	echo "PHP";
+	
+}
+ 
+?>
+```
+#####Array
+* 数值数组,会自动分配数值ID键或人工分配关联ID
+
+```php
+<?php
+	
+	//自动分配ID键
+	$ApplePros = array("Mac Air","Mac Pro","iPhone","Ipad","Ipod");
+	
+	//人工分配ID键
+	$ApplePro[0] = "Mac Air";
+	$ApplePro[1] = "Mac Pro";
+	$ApplePro[2] = "iPhone";
+	$ApplePro[3] = "Ipad";
+	$ApplePro[4] = "Ipod";
+	
+	//访问页面输出
+	echo "自动分配ID键: ".$ApplePros[0]."<br/>";
+	echo "人工分配ID键: ".$ApplePro[2];
+	
+?>
+```
+* 关联数组,每个ID键关联一个值
+
+```php
+<?php
+	
+$ApplePros =array(
+	
+	"MacAir" =>"7k",
+	"MacPro" =>"1.2W",
+	"iPhone" =>"4K~5.5K",
+	"Ipad" =>"2.8K~4.5K",
+	"Ipod" =>"1K~3K"
+);
+echo $ApplePros["Ipad"];
+
+//另一种关联键的表现,区别于数值数组的自动分配ID键，自动分配数值ID是分配数组的下标数值；关联数组的键值可以是关联字符键值
+$ApplePro["MacAir"] = "7k";
+$ApplePro["MacPro"] = "1.2W";
+$ApplePro["iPhone"] ="4K~5.5K";
+$ApplePro["Ipad"] ="2.8K~4.5K";
+$ApplePro["Ipod"] ="1K~3K";
+echo $ApplePro['MacAir'];
+
+?>
+	
+	
+```
+* 多维数组,
+    
