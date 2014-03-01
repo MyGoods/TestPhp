@@ -105,6 +105,7 @@ switch($lan)
 	
 	case 2:
 	echo "Python";
+	break;
 	
 	default:
 	echo "PHP";
