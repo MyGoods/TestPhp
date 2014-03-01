@@ -162,5 +162,50 @@ echo $ApplePro['MacAir'];
 	
 	
 ```
-* 多维数组,
+* 多维数组,主数组中的每个元素也是一个数组。在子数组中的每个元素也可以是数组.也就是 数组中嵌数组
+
+```php
+<?php
+
+$ApplePros = array
+(
+	
+	"MacPC" =>array
+		(
+			"MacBookPro",
+			"MacBookAir",
+			"Mac mini",
+			"iMac"
+		),
+	"iPhone" =>array
+		(
+			"iPhone",
+			"iPhone 3G",
+			"iPhone 3G S",
+			"iPhone 4",
+			"iPhone 4S",
+			"iPhone 5",
+			"iPhone 5C",
+			"iPhone 5S"
+		),
+	"iPad" =>array
+		(
+			"iPad2",
+			"iPad3",
+			"iPad4",
+			"iPad Mini",
+			"iPad Mini2",
+			"iPad Air"
+		)
+	
+);
+
+//将数组结构打印出来,可知是个3元2维数组
+print_r($ApplePros)."<br/>";
+
+//获取数组的值
+echo "My PC IS: ".$ApplePros['MacPC']['1'];
+
+?>
+```
     
