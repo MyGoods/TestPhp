@@ -209,4 +209,74 @@ echo "My PC IS: ".$ApplePros['MacPC']['1'];
 
 ?>
 ```
-    
+####4、循环（循环就是反复执行相同代码块）
+* while （条件成立循环才执行）
+
+```php
+<?php
+
+//while
+
+$i=2;
+
+while($i<=3)
+{
+	$i++;
+	$j=$i+1;
+	echo "变量i的值： ".$i."<br/>";
+	echo "变量j的值： ".$j."<br/>";
+}
+	
+//访问页面循环2次，变量i从初始值2开始计算
+
+//可以试试不给变量i赋初始值，查看页面循环执行效果；实际内存已默认给变量i赋初始值$i=0，循环会执行4次。
+
+?>
+```
+
+* do while （不管满不满足条件都先执行do里面的代码块，while里面条件不满足时 就跳出循环
+
+```php
+<?php
+
+//实际$i的值已经大于3 但循环还是会被先执行一次输出
+$i=4;
+do
+{
+	$i++;
+	$j=$i+1;
+	echo "变量i的值： ".$i."<br/>";
+	echo "变量j的值： ".$j."<br/>";
+}while($i<=3)
+	
+?>
+```
+
+* for （限定次数循环）
+
+```php
+<?php
+
+//for
+for($i=0;$i<=3;$i++)
+{
+	echo "变量i的值： ".$i."<br/>";
+}
+	
+?>
+```
+
+* foreach （循环遍历数组）
+
+```php
+<?php
+
+//foreach （array as value）
+$ApplePro=array("MacBookAir","MacBookPro","iPhone4s","iPhone5s");
+foreach($ApplePro as $value)
+{
+	echo "Value值为： ".$value."<br/>";
+}
+	
+?>
+```
