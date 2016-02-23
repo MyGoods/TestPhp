@@ -22,7 +22,7 @@ Windows 环境Github Shell
 * remote add origin git@github.com:defnngj/hello-world.git //连接远程github项目
 * push origin master //将本地项目更新到github项目上去
 
-#Other:
+######Other:
 * $git config -l //查看配置路径，重点看remote.origin.url
 * $git log -n l //已提交到代码仓库
 * $git status //查看new file 待提交
