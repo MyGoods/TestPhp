@@ -22,10 +22,10 @@ Windows 环境Github Shell
 * remote add origin git@github.com:defnngj/hello-world.git //连接远程github项目
 * push origin master //将本地项目更新到github项目上去
 
-Other:
-$git config -l //查看配置路径，重点看remote.origin.url
-$git log -n l //已提交到代码仓库
-$git status //查看new file 待提交
+#Other:
+* $git config -l //查看配置路径，重点看remote.origin.url
+* $git log -n l //已提交到代码仓库
+* $git status //查看new file 待提交
 
  
 #### 常见问题:
@@ -35,6 +35,7 @@ $git status //查看new file 待提交
      最好检查一下在你复制id_rsa.pub文件的内容时有没有产生多余的空格或空行，有些编辑器会帮你添加这些的。
   3. 如果输入*  push origin master 提示出错信息：error:failed to push som refs to …….
 
+  
 
 
 
