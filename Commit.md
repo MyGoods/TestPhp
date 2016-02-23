@@ -1,11 +1,11 @@
-#####Windows 环境Github Shell 
+#### Windows 环境Github Shell 
+====
+* 前置条件：
+* 到官网下载客户端：https://github-windows.s3.amazonaws.com/GitHubSetup.exe，安装完成后，会在桌面上出现两个图标，Git Shell和GitHub。那两个图标分别是命令行工具和图形界面。
+* 双击打开Git Shell
 
-*前置条件：
-一、到官网下载客户端：https://github-windows.s3.amazonaws.com/GitHubSetup.exe，安装完成后，会在桌面上出现两个图标，Git Shell和GitHub。那两个图标分别是命令行工具和图形界面。
-二、双击打开Git Shell
-
-1、先输入$ ssh-agent，再输入$ ssh-add ~/.ssh/id_key，这样就可以了。
-2、如果还是不行的话，输入ssh-add ~/.ssh/id_key 命令后出现报错Could not open a connection to your authentication agent.
+1.先输入$ ssh-agent，再输入$ ssh-add ~/.ssh/id_key，这样就可以了。
+2.如果还是不行的话，输入ssh-add ~/.ssh/id_key 命令后出现报错Could not open a connection to your authentication agent.
 解决方法是key用Git Gui的ssh工具生成，这样生成的时候key就直接保存在ssh中了，不需要再ssh-add命令加入了，其它的user，token等配置都用命令行来做。
 最好检查一下在你复制id_rsa.pub文件的内容时有没有产生多余的空格或空行，有些编辑器会帮你添加这些的。
 如果输入$ git push origin master
@@ -20,9 +20,14 @@
 $ makdir ~/hello-world //创建一个项目hello-world
 $ cd ~/hello-world //打开这个项目
 $ git init //初始化
-$ touch README
-$ git add README //更新README文件
-$ git commit -m ‘first commit’ //提交更新，并注释信息“first commit”
+$ touch Commit.md
+$ git add README //更新README文件,待提交
+$ git commit -m 'add new file Commit.md' //提交更新，并注释信息“add new file”
 $ git remote add origin git@github.com:defnngj/hello-world.git //连接远程github项目
-$ git push -u origin master //将本地项目更新到github项目上去
+$ git push origin master //将本地项目更新到github项目上去
+
+$git config -l //查看配置路径，重点看remote.origin.url
+$git log -n l //已提交到代码仓库
+$git status //查看new file 待提交
+
 
